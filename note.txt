@@ -1,0 +1,46 @@
+http method
+use คือ เริ่มต้น
+
+เวลาสร้าง modoule ต้อง export default name ออกมาทุกครั้ง
+
+<!-- <h1>TEST EJS</h1>
+  <p><b>ชื่อ:</b><%= name %></p>
+  <p><b>อายุ:</b><%= age %></p>
+  <%- address %>
+
+  <hr>
+
+  <% if (age>=18){ %>
+    <h1>ผ่านการใช้งาน</h1>
+  <% }else {%>
+    <h1>ไม่ผ่านการใช้งาน</h1>
+  <% } %>
+
+  <hr>
+  <% for(i=1;i<=10;i++) {%>
+      <p>ลำดับที่ <%= i %></p>
+  <% } %> -->
+
+  <% for(index in products) {%>
+    <li><%= products[index] %></li>
+  <% } %>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p><%=products%></p>
+
+  <% Object.values(products).forEach(function(item){%>
+    <img src="<%= item.image %>" alt="">
+    <p>ชื่อสินค้า : <%= item.name %> </p>
+    <p>ราคา : <%= item.price %> บาท</p>
+    <hr>
+  <% }) %>
+</body>
+</html>
